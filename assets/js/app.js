@@ -19,7 +19,7 @@ let vuePlaylist = 'default'; // 'default' ou 'liste'
 
 // Affichage des musiques 
 const getData = async () => {
-    const req = await fetch("./assets/json/_data.json");
+    const req = await fetch("./assets/json/data.json");
     console.log(req);
     const dbMusic = await req.json();
     console.log("result ", dbMusic);
