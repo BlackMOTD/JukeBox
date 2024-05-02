@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assure que le header reste au-dessus du reste du contenu */
+    display: flex; /* Utiliser le modèle de boîte flexible */
+    justify-content: center; /* Centrer horizontalement les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+}
+
+.content {
+    margin-top: 80px; /* La hauteur du header, pour éviter que le contenu soit masqué par le header */
+    padding: 20px;
+}
+
+
+/* ------------------ HEADER ---------------------- */
+
+#playPauseButton, #random-button, #vue-button, #theme-button{
+    width:20px; /* ajustez la taille selon vos besoins */
+    height: 20px; /* ajustez la taille selon vos besoins */
+    background-size: cover;
+    background-color: #333; /* couleur de fond */
+    border: none; /* supprime la bordure */
+    outline: none; /* supprime la mise en évidence au clic */
+    margin-left: 20px; /* Ajouter un espacement entre les boutons */
+}
+
+#playPauseButton{
+    background-image: url("../ico/play-off.png"); /* image par défaut */
+}
+
+#random-button{
+    background-image: url("../ico/aleatoire.png"); /* image par défaut */
+}
+
+#vue-button{
+    background-image: url("../ico/vue.png"); /* image par défaut */
+
+}
+
+#theme-button{
+    background-image: url("../ico/nuit.png"); /* image par défaut */
+
+}
+
+
+
+@keyframes colorAnimation {
+    0% {
+        color: #9a9a9a; /* Gris */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre subtile */
+      }
+      50% {
+        color: #ffffff; /* Blanc */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre subtile */
+      }
+      100% {
+        color: #9a9a9a; /* Gris */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre subtile */
+      }
+    }
+  
+  #titre-en-cours-text {
+    animation: colorAnimation 1.5s infinite; /* Animation infinie */
+  }
+
+  #titre-en-cours {
+    display: flex; /* Utiliser le modèle de boîte flexible */
+    align-items: center; /* Centrer verticalement les éléments */
+    margin-right: auto; /* Pousse les éléments vers la gauche */
+}
+  
+  
+  /* ----------------- Playlist --------------- */
+
+  .playlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles pour la vue par défaut */
+.playlist-item.default {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.playlist-item.default h2,
+.playlist-item.default h3 {
+    text-align: center;
+}
+
+.playlist-item.default .cover {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styles pour la vue en liste */
+/* Styles pour la vue en liste */
+.playlist-item.liste {
+    width: calc(100% - 20px);
+    min-width: 100%;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alignement à gauche */
+    border-radius: 10px;
+}
+
+.playlist-item.liste .cover {
+    width: 50px; /* Taille standard pour toutes les images de couverture en mode liste */
+    height: 50px; /* Taille standard pour toutes les images de couverture en mode liste */
+    margin-right: 20px; /* Espacement entre la couverture et les détails */
+    border-radius: 10px;
+}
+
+.playlist-item.liste .music-details {
+    margin-left: 20px; /* Espacement entre la couverture et les détails */
+}
+
+.playlist-music-details-text {
+    display: inline; /* Afficher les éléments sur la même ligne */
+}
+
+.playlist-item.liste h2,
+.playlist-item.liste h3 {
+    margin: 0; /* Supprime les marges par défaut */
+    text-align: left; /* Alignement à gauche */
+}
+
+.playlist-item.liste .play-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("../ico/play-black.png"); /* Chemin de votre icône play.png */
+    background-size: cover;
+    margin-left: auto; /* Pour aligner à droite */
+    margin-right: 1;
+    
+}
+
+.selected {
+    background-color: #ffa500; /* Changez la couleur de surbrillance selon vos préférences */
+    /* Ajoutez d'autres styles de surbrillance si nécessaire */
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite; /* Modifiez la durée ou le timing selon vos préférences */
+}
+
+@media screen and (max-width: 768px) {
+    .playlist-item {
+        width: calc(50% - 20px); /* Sur les écrans moyens, affiche deux éléments par ligne */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .playlist-item {
+        width: calc(100% - 20px); /* Sur les petits écrans, affiche un élément par ligne */
+        min-width: 100%; /* Assure qu'il y ait au moins une musique par ligne */
+    }
+}
+ 
