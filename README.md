@@ -17,19 +17,19 @@ Sans oublier de modifier le fichier /assets/json/data.json , sous forme :
     
 Le site s'affiche ainsi sur ordinateur : 
 - au format "carte" :
-<img width="800" alt="ordi1" src="https://github.com/BlackMOTD/JukeBox/assets/105824316/4b2c9427-8d69-4077-a406-8396908c366a">
+<img width="800" alt="ordi1" src="https://github.com/BlackMOTD/JukeBox_API/assets/105824316/4b2c9427-8d69-4077-a406-8396908c366a">
 
 - au format "liste" : 
-<img width="800" alt="ordi2" src="https://github.com/BlackMOTD/JukeBox/assets/105824316/d6f4c051-58bd-46c4-bcb7-411180cbbf36">
+<img width="800" alt="ordi2" src="https://github.com/BlackMOTD/JukeBox_API/assets/105824316/d6f4c051-58bd-46c4-bcb7-411180cbbf36">
 
 
 Et sur mobile : 
 - au format "carte" :
-<img width="300" alt="tel1" src="https://github.com/BlackMOTD/JukeBox/assets/105824316/3526dacc-37ec-4567-9b03-cb4ed6cc6e31">
+<img width="300" alt="tel1" src="https://github.com/BlackMOTD/JukeBox_API/assets/105824316/3526dacc-37ec-4567-9b03-cb4ed6cc6e31">
 
 
 - au format "liste" : 
-<img width="300" alt="tel1" src="https://github.com/BlackMOTD/JukeBox/assets/105824316/645c793d-9615-4e5f-aa31-a0b336f25fb9">
+<img width="300" alt="tel1" src="https://github.com/BlackMOTD/JukeBox_API/assets/105824316/645c793d-9615-4e5f-aa31-a0b336f25fb9">
 
 
 En appuyant sur une étiquette de musique, la musique se lancera automatiquement.
